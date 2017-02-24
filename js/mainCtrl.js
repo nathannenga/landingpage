@@ -1,5 +1,12 @@
 angular.module('app').controller('mainCtrl',function($scope, mainService){
 
- $scope.test = "hello world"
+var newUser = {};
+
+$scope.submit = function(){
+  newUser.email = $scope.email;
+};
+
+$scope.newUser = newUser;
+
 
 });

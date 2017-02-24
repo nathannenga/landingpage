@@ -1,6 +1,9 @@
-@import url("./fonts/font-awesome.min.css");
+
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
 
 *  {box-sizing:border-box;}
 
@@ -35,6 +38,8 @@ body{
   display:flex;
   flex-flow: column;
   align-items:center;
+  min-height: 400px;
+
 }
 
 .header-text {
@@ -51,7 +56,11 @@ body{
   color: #ffffff;
 	font-size: 20px;;
 	line-height: 1.65;
+  padding-right: 25px;
+  padding-left: 25px;
 }
+
+
 
 .input-container {
   width:70%;
@@ -72,7 +81,7 @@ body{
 		font-size: 20px;;
 		line-height: 1.65;
     height: 45px;
-    color: #fff;
+    color: #66ffcc;
 }
 
 .email-label {
@@ -104,6 +113,38 @@ body{
   border: 1px solid #fff;
 }
 
+.referral-link {
+  color: #66ffcc;
+  font-size:35px;
+  text-align:center;
+
+}
+
+.hide {
+  display:flex;
+  flex-flow: column;
+  align-items:center;
+}
+
+.show {
+  display:flex;
+  flex-flow: column;
+  align-items:center;
+}
+
+.social-icons{
+  color:white;
+  font-size:30px;
+  display:flex;
+  justify-content:space-around;
+  margin-top:40px;
+  min-width: 300px;
+}
+
+i:hover {
+  color: #66ffcc;
+}
+
 ::-webkit-input-placeholder {
    color: #b3b3b3;
    margin-left: 0px;
@@ -122,4 +163,40 @@ body{
 :-ms-input-placeholder {
    color: #b3b3b3;
    margin-left: 0px;
+}
+
+button {
+  background:none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;}
+
+
+@media only screen and (max-width : 700px) {
+.referral-link {
+  font-size:30px;
+}
+
+}
+
+@media only screen and (max-width : 490px) {
+  .header-text{
+    font-size:80px;
+  }
+
+.full-input {
+  font-size:18px;
+}
+
+.referral-link {
+  font-size:20px;
+}
+
+.social-icons{
+  font-size:27px;
+}
+
+.welcome-text {
+  margin-bottom:20px;
+
+}
 }

@@ -2,20 +2,38 @@
 <html ng-app="app">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css">
   </head>
-  <body ng-controller="mainCtrl">
+  <body ng-controller="mainCtrl" class="ng-cloack">
 
     <div class="wrapper">
       <div class="main-container">
         <div class="header-text">Boutive</div>
-        <div class="welcome-text">Coming soon! <br/> Enter your email to find out when we're live and get <b>10%</b> off your first order.</div>
-        <div class="input-container">
-          <input type="text" class ="full-input" placeholder="hello@boutive.com"></input>
-          <div class="email-label">email</div>
+
+          <div ng-hide="newUser.email" ng-animate="'animate'" class="hide">
+            <div class="welcome-text"> <p><b>Coming soon!</b> Daily boutique deals up to 70% off. <br/> Enter your email to find out when we're live and get <b>10%</b> off your first order.</p></div>
+            <div class="input-container">
+              <input type="email" class ="full-input" ng-model="email"  placeholder="hello@boutive.com"></input>
+              <div class="email-label">email</div>
+            </div>
+            <button class="submit-button" ng-click="submit()">Submit</button>
+          </div>
+
+        <div ng-show="newUser.email" class="show">
+          <div class="welcome-text"> <p><b>Thank you!</b> <br/>Want to get special VIP access to deals? Get 3 friends to sign up! Use the following referral link to invite others.</p></div>
+          <div class="input-container">
+            <div class="referral-link">www.boutive.com/htkY7890</div>
+          </div>
+          <div class="social-icons">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-pinterest" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </div>
         </div>
-        <div class="submit-button">Submit</div>
 
       </div>
     </div>
